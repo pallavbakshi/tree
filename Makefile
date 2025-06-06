@@ -33,12 +33,12 @@ OBJS=tree.o list.o hash.o color.o file.o filter.o info.o unix.o xml.o json.o htm
 # Uncomment options below for your particular OS:
 
 # Linux defaults:
-LDFLAGS?=-s
-#CFLAGS?=-ggdb
-CFLAGS?=-O3
-CFLAGS+=-std=c11 -Wpedantic -Wall -Wextra -Wstrict-prototypes -Wshadow -Wconversion
-# _LARGEFILE64_SOURCE may be considered obsolete
-CPPFLAGS+=-DLARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
+#LDFLAGS?=-s
+##CFLAGS?=-ggdb
+#CFLAGS?=-O3
+#CFLAGS+=-std=c11 -Wpedantic -Wall -Wextra -Wstrict-prototypes -Wshadow -Wconversion
+## _LARGEFILE64_SOURCE may be considered obsolete
+#CPPFLAGS+=-DLARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
 
 # Uncomment for FreeBSD:
 #CC=cc
@@ -67,11 +67,11 @@ CPPFLAGS+=-DLARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
 
 # Uncomment for MacOS:
 # It is not allowed to install to /usr/bin on MacOS any longer (SIP):
-#CC = cc
-#CFLAGS?=-O2
-#CFLAGS+=-Wall -fomit-frame-pointer -no-cpp-precomp
-#LDFLAGS+=
-#MANDIR=${PREFIX}/share/man
+CC = cc
+CFLAGS?=-O2
+CFLAGS+=-Wall -fomit-frame-pointer -no-cpp-precomp
+LDFLAGS+=
+MANDIR=${PREFIX}/share/man
 
 # Uncomment for HP/UX:
 #prefix=/opt
